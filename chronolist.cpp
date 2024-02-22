@@ -49,13 +49,11 @@ template <class C> void remove_front(C & v)
 
 template <class C> void modify(C & v)
 {
-
-   for (int i=0; i<v.size(); i++)
+   
+   for ( auto & i : v )
    {
     
-    if (!v[i].name .empty()) {
-        v[i].name.erase(0, 1); // Erase the first character
-    }
+    i.name += '!';
    
    }
     

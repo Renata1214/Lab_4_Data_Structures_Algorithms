@@ -62,12 +62,10 @@ the print() method in Payload3*/
 template <class C> void modify(C & v)
 {
    
-   for (int i=0; i<v.size(); i++)
+   for ( auto & i : v )
    {
     
-    if (!v[i].name .empty()) {
-        v[i].name.erase(0, 1); // Erase the first character
-    }
+    i.name += '!';
    
    }
     
@@ -133,7 +131,7 @@ cout << "vector " << '\n';
     std::cout <<  duration2.count() << std::endl;
 
 
-    
+
 
     return 0;
 }
