@@ -3,6 +3,8 @@
 #pragma once 
 using std::string;
 
+struct VectorIterator;
+
 struct Vector
 {
 
@@ -49,15 +51,14 @@ bool empty() const;
 Payload front() const; 
 Payload back() const;
 
-VectorIterator begin() const ;
-VectorIterator end() const ;
+ VectorIterator begin() const;
+    VectorIterator end() const;
 
 
 // //Debugging function
 // Payload tryout () const ;
 
 };
-
 
 struct VectorIterator {
 

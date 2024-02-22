@@ -162,13 +162,13 @@ Payload List::back() const{
 }
 
 ListIterator List::begin() const { 
-        return iterator(Head_List); 
+        return ListIterator(Head_List); 
     }
 
     ListIterator List::end() const { 
-        return iterator(nullptr);
+        return ListIterator(nullptr);}
 
-        ListIterator::ListIterator(Node *node) : current(node) {}
+    ListIterator::ListIterator(Node *node) : current(node) {}
 
 ListIterator& ListIterator::operator++() {
     current = current->next_link;

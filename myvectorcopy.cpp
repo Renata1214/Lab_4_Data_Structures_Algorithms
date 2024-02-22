@@ -119,11 +119,11 @@ Payload Vector::back() const{
 }
 
      VectorIterator Vector::begin() const { 
-        return iterator(Objects); 
+        return VectorIterator(Objects); 
     }
 
     VectorIterator Vector::end() const { 
-        return iterator(Objects + VecCounter); 
+        return VectorIterator(Objects + VecCounter); 
     }
 
 VectorIterator::VectorIterator(Payload *ptr) : current(ptr) {}

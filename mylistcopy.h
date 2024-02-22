@@ -12,6 +12,17 @@ struct Node
     Node (Payload n);
 };
 
+struct ListIterator {
+
+    Node *current;
+
+    ListIterator(Node *node);
+
+    ListIterator& operator++();
+    bool operator!=(const ListIterator& other) const;
+    Payload& operator*() const;
+};
+
 struct List
 {
 // Members of list
@@ -45,23 +56,13 @@ Payload front() const;
 Payload back() const;
 
 //Prelab4
-ListIterator begin ();
-
-ListIterator end();
+ListIterator begin () const;
+ListIterator end() const;
 
 };
 
 
-struct ListIterator {
 
-    Node *current;
-
-    ListIterator(Node *node);
-
-    ListIterator& operator++();
-    bool operator!=(const ListIterator& other) const;
-    Payload& operator*() const;
-};
 
 
 
